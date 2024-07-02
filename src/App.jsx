@@ -6,7 +6,10 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer title="Bienvenidos a Luz & Aromas" />
+      <div className="flex justify-center gap-5 container">
+        <ItemListContainer title="Bienvenidos a Luz" />
+        <ItemListContainer title="Welcome to Aromas" />
+      </div>
       <Footer />
     </>
   );

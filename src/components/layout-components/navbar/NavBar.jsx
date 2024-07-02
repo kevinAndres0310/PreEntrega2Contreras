@@ -2,7 +2,7 @@ import {CardWidget, Categories} from './components';
 
 const NavBar = () => {
   return (
-    <nav className="navbar bg-base-200">
+    <nav className="navbar bg-base-200 mb-10">
       <section className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">

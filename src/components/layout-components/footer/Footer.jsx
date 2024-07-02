@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+    <footer className="footer footer-center bg-base-200 text-base-content rounded mt-10">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">Nosotros</a>
         <a className="link link-hover">Contacto</a>
@@ -42,8 +42,8 @@ const Footer = () => {
       </nav>
       <aside>
         <p>
-          Copyright © ${new Date().getFullYear()} - All right reserved by Luz &
-          Aroma Industries
+          Copyright © ${new Date().getFullYear()} - Todos los derechos
+          reservados por Luz & Aroma Industria
         </p>
       </aside>
     </footer>
