@@ -1,17 +1,11 @@
-import Footer from './components/layout-components/footer/Footer';
-import NavBar from './components/layout-components/navbar/NavBar';
-import ItemListContainer from './components/shared-components/ItemListContainer';
+import {BrowserRouter} from 'react-router-dom';
+import Router from './routes';
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <div className="flex justify-center gap-5 container">
-        <ItemListContainer title="Bienvenidos a Luz" />
-        <ItemListContainer title="Welcome to Aromas" />
-      </div>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }
 

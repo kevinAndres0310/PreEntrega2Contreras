@@ -1,9 +1,7 @@
-import React from 'react';
-
 const Categories = () => {
   return (
     <section className="navbar-center hidden md:flex">
-      <ul className="menu menu-horizontal px-1">
+      <ul className="menu menu-horizontal px-1 z-10">
         <li>
           <a>Nosotros</a>
         </li>
@@ -12,7 +10,7 @@ const Categories = () => {
             <summary>Categorias</summary>
             <ul className="p-2">
               <li>
-                <a>Velas</a>
+                <a>Velassssss</a>
               </li>
               <li>
                 <a>Difusor</a>

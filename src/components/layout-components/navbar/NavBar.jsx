@@ -1,46 +1,42 @@
-import {CardWidget, Categories} from './components';
+import {useState, useEffect} from 'react';
+import {FaBars} from 'react-icons/fa';
+import {CardWidget, SideBar, Categories} from './components';
 
 const NavBar = () => {
+  const [open, setOpen] = useState(false);
+
+  const toggleSideBar = () => {
+    setOpen(!open);
+  };
+
+  // close if the esc key is pressed
+  useEffect(() => {
+    const keyHandler = ({keyCode}) => {
+      if (!open || keyCode !== 27) return;
+      setOpen(false);
+    };
+    document.addEventListener('keydown', keyHandler);
+    return () => document.removeEventListener('keydown', keyHandler);
+  });
+
   return (
-    <nav className="navbar bg-base-200 mb-10">
+    <nav className="navbar fixed top-0 left-0 right-0 bg-base-200">
       <section className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li>
-              <a>Nosotros</a>
-            </li>
-            <li>
-              <a>Categorias</a>
-              <ul className="p-2">
-                <li>
-                  <a>Velas</a>
-                </li>
-                <li>
-                  <a>Difusores</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Contacto</a>
-            </li>
-          </ul>
+        {/* SideBar */}
+        <div>
+          <button
+            role="button"
+            className="btn btn-circle btn-ghost md:hidden"
+            onClick={toggleSideBar}>
+            <FaBars size={28} />
+          </button>
+          {open && (
+            <div
+              className="bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm z-10"
+              onClick={toggleSideBar}
+            />
+          )}
+          <SideBar openSidebar={open} closeSidebar={toggleSideBar} />
         </div>
         <a className="btn btn-ghost text-xl hidden md:flex">Luz & Aromas</a>
       </section>
