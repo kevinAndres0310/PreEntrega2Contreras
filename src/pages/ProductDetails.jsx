@@ -6,7 +6,6 @@ const ProductDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Añade esta verificación
   const product = location.state;
 
   if (!product) {
@@ -25,17 +24,19 @@ const ProductDetails = () => {
         {/* Imagen del producto */}
         <div className="md:w-1/2">
           <img
-            src="https://images.unsplash.com/photo-1544472991-1324437fe348?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src={product.thumbnail}
             alt={product.title}
             className="w-full h-auto object-cover rounded-lg shadow-lg"
           />
         </div>
 
         {/* Detalles del producto */}
-        <div className="md:w-1/2 flex flex-col justify-between">
+        <div className="md:w-1/2 flex flex-col gap-10">
           <div>
             <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
-            <p className="text-2xl font-semibold mb-4">${product.price}</p>
+            <p className="text-2xl font-semibold mb-4">
+              {product.priceFormatter}
+            </p>
             <p className="mb-6">{product.details}</p>
           </div>
 

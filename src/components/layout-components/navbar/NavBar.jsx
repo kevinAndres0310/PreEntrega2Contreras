@@ -1,9 +1,11 @@
 import {useState, useEffect} from 'react';
 import {FaBars} from 'react-icons/fa';
 import {CardWidget, SideBar, Categories} from './components';
+import {useNavigate} from 'react-router-dom';
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSideBar = () => {
     setOpen(!open);
@@ -38,7 +40,11 @@ const NavBar = () => {
           )}
           <SideBar openSidebar={open} closeSidebar={toggleSideBar} />
         </div>
-        <a className="btn btn-ghost text-xl hidden md:flex">Luz & Aromas</a>
+        <a
+          onClick={() => navigate('/')}
+          className="btn btn-ghost text-xl hidden md:flex">
+          TelePhone
+        </a>
       </section>
       <Categories />
       <CardWidget />
