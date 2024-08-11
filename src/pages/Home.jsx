@@ -1,10 +1,9 @@
 import ItemListContainer from '../components/shared-components/ItemListContainer';
-import {getAllItems} from '../services/asyncMock';
 
 const Home = () => {
   return (
     <>
-      <ItemListContainer fetchFunction={getAllItems} />
+      <ItemListContainer collectionName="products" />
     </>
   );
 };

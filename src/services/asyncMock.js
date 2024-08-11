@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+// Sin usar esto no se esta usando para nada
 const API_URL = 'https://api.mercadolibre.com';
 
 export const getAllItems = async () => {

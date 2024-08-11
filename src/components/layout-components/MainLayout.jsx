@@ -4,7 +4,7 @@ import NavBar from './navbar/NavBar';
 
 const MainLayout = () => {
   return (
-    <main className="flex flex-col h-full">
+    <main className="flex flex-col h-screen">
       <NavBar />
       <section className="flex-grow  pt-28 px-5 sm:px-14 xl:px-28">
         <Outlet />

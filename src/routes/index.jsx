@@ -3,6 +3,8 @@ import MainLayout from '../components/layout-components/MainLayout';
 import Home from '../pages/Home';
 import ProductDetails from '../pages/ProductDetails';
 import Categoria from '../pages/Categoria';
+import Cart from '../pages/Cart';
+import Checkout from '../pages/Checkout';
 
 const Router = () => {
   return useRoutes([
@@ -26,7 +28,15 @@ const Router = () => {
           path: 'categorie/:id',
           element: <Categoria />,
         },
+        {
+          path: '/cart',
+          element: <Cart />,
+        },
       ],
+    },
+    {
+      path: '/checkout',
+      element: <Checkout />,
     },
   ]);
 };
