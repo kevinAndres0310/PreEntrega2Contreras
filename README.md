@@ -1,8 +1,13 @@
-# React + Vite
+E-commerce Platform for Phones, Parts, and Accessories
+This project is an e-commerce platform focused on selling phones, parts, and accessories. Built with React and Vite, it provides a modern and efficient development environment with Hot Module Replacement (HMR) and some ESLint rules for code quality.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+Browse and search for phones, parts, and accessories.
+View detailed information about each product.
+Add products to the shopping cart and proceed to checkout.
+User authentication and profile management.
+Admin panel for managing products, categories, and orders.
+Technologies Used
+React: A JavaScript library for building user interfaces.
+Vite: A build tool that provides a faster and leaner development experience for modern web projects.
+Firebase: Used for backend services including Firestore for database and authentication.
